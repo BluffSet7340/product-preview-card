@@ -45,13 +45,13 @@ Users should be able to:
 
 The most valuable thing I learnt was using the <picture> and <source> tag where the picture tag acted as a placeholder for the image and the source tag acted as another image that only came up with a specfic width was reached. All of this was done directly on the HTML itself and didn't require any additions to the media query on CSS, which I thought was pretty cool. Another lesser thing that I learnt was that when you set the width to 100vw, some browsers may add on to it, causing it flow horizontally, a pressing issue on mobile devices. It's more optimal to leave the width as is. Last but not least, I used SCSS for this project, suggested by frontendmentor themselves. I learnt how to use variables for fonts and colours, and sandwiching inner CSS selectors inside of their out CSS selector. So far it has helped me in writing code that is more understandable. 
 
-To see how you can add code snippets, see below:
 
 ```html
 <picture class="pict_container">
     <source srcset="images/image-product-desktop.jpg" media="(min-width:605px)">
     <img src="images/image-product-mobile.jpg" alt="Perfume" />
 </picture>
+```
 
 ### Continued development
 
