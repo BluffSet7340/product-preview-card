@@ -37,61 +37,37 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+- SCSS
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Icons](https://fontawesome.com/icons/cart-shopping?f=classic&s=solid) - Font Awesome
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+The most valuable thing I learnt was using the <picture> and <source> tag where the picture tag acted as a placeholder for the image and the source tag acted as another image that only came up with a specfic width was reached. All of this was done directly on the HTML itself and didn't require any additions to the media query on CSS, which I thought was pretty cool. Another lesser thing that I learnt was that when you set the width to 100vw, some browsers may add on to it, causing it flow horizontally, a pressing issue on mobile devices. It's more optimal to leave the width as is. Last but not least, I used SCSS for this project, suggested by frontendmentor themselves. I learnt how to use variables for fonts and colours, and sandwiching inner CSS selectors inside of their out CSS selector. So far it has helped me in writing code that is more understandable. 
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+<picture class="pict_container">
+    <source srcset="images/image-product-desktop.jpg" media="(min-width:605px)">
+    <img src="images/image-product-mobile.jpg" alt="Perfume" />
+</picture>
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Since this was first time starting with a mobile first workflow, I ended up having issues trying to port it over desktop. I am aware that the point of doing the above is that it becomes easier to implement for desktop so it's clear that I need to work more on it. So one issue that I faced in desktop mode was the content was taking up more width than the image when both the image and content should have equal widths. My workaround was simply to implement widths of 300px for both the content and the image. Another issue was the fact that the image is desktop view was taking up the full height and the only workaround I could up with was forcing the image to take a height of 450px, which I know is haram. 
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+The issues I faced is what I hope to work on in later projects. 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Taking on a Frontend Mentor challenge | Responsive Product Preview Card Component](https://www.youtube.com/watch?v=B2WL6KkqhLQ) - Skip to the section where he talks about switching the image from mobile to desktop depending on the width. 
+- [Horizontal Scroll Bar?](https://stackoverflow.com/questions/26722340/horizontal-scroll-bar?rq=1) - This seemed to fix my issue with the horizontal scroll bar on mobile screens.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@BluffSet7340](https://www.frontendmentor.io/profile/BluffSet7340)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Special thanks to Kevin Powell for introducing the concept of <picture> and <source> tags and to the people of Stack Overflow who cleared my doubts regarding the horizontal scroll bar. 
